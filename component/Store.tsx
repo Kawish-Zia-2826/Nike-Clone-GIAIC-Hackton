@@ -13,7 +13,15 @@ import styles from "./Store.module.css";
 
 const Store = () => {
 
-      const [data, setData] = useState(null); 
+  interface Item {
+    id: number;
+    image: string;
+    title: string;
+    description: string;
+    price: string;
+  }
+  
+  const [data, setData] = useState<Item[] | null>(null);
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null); 
 
@@ -44,8 +52,8 @@ const Store = () => {
     <div className="container my-5">
     <div className="row g-5">
   
-      {data.map((item) => (
-       <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+      {data?.map((item) => (
+       <div className="col-12 col-sm-6 col-md-4 col-lg-3"key={item.id}>
        <div className={styles.card} >
          <img
            src={item.image}
