@@ -1,12 +1,13 @@
-
 import React from 'react'
-import Home from './Home/page'
+import Help from '@/component/Help'
+
 
 
 const page = () => {
   return (
-    <Home></Home>
-  
+ <>
+<Help></Help>
+ </>
   )
 }
 

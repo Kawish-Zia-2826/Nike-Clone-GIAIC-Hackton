@@ -1,12 +1,10 @@
-
+"use client"
 import React from 'react'
-import Home from './Home/page'
-
+import Store from '@/component/Store'
 
 const page = () => {
   return (
-    <Home></Home>
-  
+    <Store />
   )
 }
 
